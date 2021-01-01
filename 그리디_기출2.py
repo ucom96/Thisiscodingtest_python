@@ -2,10 +2,11 @@ s=input()
 
 result=int(s[0])
 
-for i in range(len(s)-1):
-    if int(s[i])==0 or int(s[i])==1:
-        result=result+int(s[i+1])
+for i in range(1,len(s)):
+    num=int(s[i])
+    if num<=1 or result<=1:
+        result+=num
     else:
-        result=result*int(s[i+1])
+        result*=num
 
 print(result)
