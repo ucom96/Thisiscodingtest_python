@@ -10,7 +10,10 @@ for i in s:
     else:
         sortedS.append(i)
 
+# 알바펫 정렬
 sortedS.sort()
+# 숫자를 맨 뒤에 붙이기
 sortedS.append(summary)
 
-print(sortedS)
+# 리스트를 문자열로 변환
+print(''.join(sortedS))
