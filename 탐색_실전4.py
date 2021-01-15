@@ -24,6 +24,9 @@ def bfs():
         for i in range(4):
             nx=x+dx[i]
             ny=y+dy[i]
+            # 미로를 벗어난 공간이라면 무시
+            if nx<0 or ny<0 or nx>=n or ny>=m:
+                continue
             # 노드가 괴물이 없는 공간이라면
             if graph[nx][ny]==1:
                 # 이전 노드의 값보다 하나 증가시킴
